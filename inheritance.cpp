@@ -5,7 +5,7 @@ class Animal
 public:
     void walking()
     {
-        cout << "I am walking.." << endl;
+        cout << "this is animal . and I am walking.." << endl;
     }
     void sleeping()
     {
@@ -27,11 +27,11 @@ class cat : public Animal
 public:
     void purr()
     {
-        cout << "I am purring - meow meow" << endl;
+        cout << "this is cat and I am purring - meow meow" << endl;
     }
 };
 
-// Multiple inheritance 
+// Multiple inheritance
 class dog : public Animal, public lion
 {
 public:
@@ -41,15 +41,31 @@ public:
     }
 };
 
+// multi-levle inheritance
+class snake : public cat
+{
+public:
+    void crawl()
+    {
+        cout << "I am snake... and i am crawling!" << endl;
+    }
+};
+
 int main()
 {
-    lion l1;
-    l1.roar();
+    // lion l1;
+    // l1.roar();
     // l1.sleeping();
 
-    dog d1;
-    d1.barking();
-    d1.roar();
+    // dog d1;
+    // d1.barking();
+    // d1.roar();
+
+    // multi-levle inheritance calling
+    snake s1;
+    s1.walking();
+    s1.crawl();
+    s1.purr();
 
     return 0;
 }
