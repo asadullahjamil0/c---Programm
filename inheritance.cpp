@@ -12,7 +12,7 @@ public:
         cout << "I am sleeping.." << endl;
     }
 };
-class lion : public Animal
+class lion
 {
 public:
     void roar()
@@ -20,6 +20,8 @@ public:
         cout << "I am roaring - mhaa mhaa" << endl;
     }
 };
+
+// single inheritance
 class cat : public Animal
 {
 public:
@@ -28,12 +30,14 @@ public:
         cout << "I am purring - meow meow" << endl;
     }
 };
-class dog : public Animal
+
+// Multiple inheritance 
+class dog : public Animal, public lion
 {
 public:
     void barking()
     {
-        cout << "I am barking - whaa whaa" << endl;
+        cout << "this is dog .I am barking - whaa whaa" << endl;
     }
 };
 
@@ -41,10 +45,11 @@ int main()
 {
     lion l1;
     l1.roar();
-    l1.sleeping();
+    // l1.sleeping();
 
     dog d1;
     d1.barking();
+    d1.roar();
 
     return 0;
 }
